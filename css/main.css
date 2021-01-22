@@ -21,44 +21,29 @@
 }
 
 body{
+  perspective: 1000px;
   margin: auto;
   height: 100vh;
   font-family: 'KumbhSansRegular';
   font-size: 18px;
-  background-color: var(--dark-cyan);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  position: relative;
-}
-
-body:before{
-  content: " ";
-  width: 100%;
-  height: 100vh;
-  background: url("/images/bg-pattern-top.svg") no-repeat;
-  background-position: top -450px left -275px;
-  position: absolute;
-}
-
-body:after{
-  content: " ";
-  width: 100%;
-  height: 100vh;
-  background: url("/images/bg-pattern-bottom.svg") no-repeat;
-  background-position: bottom -450px right -275px;
-  position: absolute;
+  background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg"), var(--dark-cyan);
+  background-repeat: no-repeat;
+  background-position: right calc(47vw + 15%) bottom calc(65vh - 15vw), left calc(40vw + 25%) top calc(72vh - 10vw);
 }
 
 .profile-card{
   z-index: 1;
   width: 350px;
   margin: auto;
-  border-radius: 10px;
-  background: url("/images/bg-pattern-card.svg") no-repeat top center;
+  border-radius: 15px;
+  background: url("../images/bg-pattern-card.svg") no-repeat top center;
   background-color: #fff;
+  box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.35);
 }
 
 .profile-card-top{
@@ -70,7 +55,7 @@ body:after{
   width: 96px;
   border-radius: 50%;
   border: 5px solid #fff;
-  margin: 86px auto 10px auto;
+  margin: 86px auto 18px auto;
 }
 
 .profile-card-top h5{
@@ -114,7 +99,7 @@ body:after{
 
 .profile-card-bottom p span{
   font-family: 'KumbhSansRegular';
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   letter-spacing: 1px;
   color: var(--dark-grayish-blue);
 }
